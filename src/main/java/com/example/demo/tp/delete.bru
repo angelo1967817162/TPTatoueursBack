@@ -1,0 +1,23 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/tatoueurs/5
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: test_admin
+  password: test_admin
+}
+
+body:json {
+  {
+    "nom":"Elena",
+    "style":"comics"
+  }
+}
