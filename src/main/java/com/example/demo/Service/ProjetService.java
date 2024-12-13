@@ -20,7 +20,7 @@ public class ProjetService {
             return projetRepository.findByDescription(description);
         } else {
             return projetRepository.findAll();
-        }
+        }//test
     }
     // Ajouter un nouveau tatoueur
     public Projet ajouterProjet(Projet nouveauProjet) {
