@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ProjetRepository extends JpaRepository<Projet,Integer> {
 
-    List<Projet> findByStyle(String description);
+    List<Projet> findByDescription(String description);
 
 
 }

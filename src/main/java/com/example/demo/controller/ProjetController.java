@@ -2,6 +2,7 @@ package com.example.demo.controller;
 import com.example.demo.Exception.NotFoundException;
 import com.example.demo.Service.ProjetService;
 import com.example.demo.Service.TatoueurService;
+import com.example.demo.model.Client;
 import com.example.demo.model.Projet;
 import com.example.demo.model.Tatoueur;
 import com.example.demo.repository.ProjetRepository;
@@ -25,8 +26,8 @@ public class ProjetController {
     @Autowired
     private ProjetService projetService;
     @GetMapping("/projets")
-    public List<Projet> getProjets(@RequestParam(required = false) String description) {
-        return projetService.getProjets(description);
+    public List<Projet> getProejts() {
+        return projetService.getProjets();
     }
 
 

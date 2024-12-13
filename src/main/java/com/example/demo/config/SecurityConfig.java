@@ -23,6 +23,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/tatoueurs/**","tatoueurs/*").permitAll()
                         .requestMatchers("/clients/**","clients/*").permitAll()
+                        .requestMatchers("/projets/**","projets/*").permitAll()
                         .anyRequest().authenticated())
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults());

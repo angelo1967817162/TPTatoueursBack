@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 import com.example.demo.Exception.NotFoundException;
+import com.example.demo.model.Client;
 import com.example.demo.model.Projet;
 import com.example.demo.model.Tatoueur;
 import com.example.demo.repository.ProjetRepository;
@@ -15,12 +16,10 @@ public class ProjetService {
     @Autowired
     private ProjetRepository projetRepository;
     // Obtenir tous les tatoueurs ou filtrer par style
-    public List<Projet> getProjets(String description) {
-        if (description != null) {
-            return projetRepository.findByDescription(description);
-        } else {
-            return projetRepository.findAll();
-        }//test
+    public List<Projet> getProjets() {
+
+        return projetRepository.findAll();
+
     }
     // Ajouter un nouveau tatoueur
     public Projet ajouterProjet(Projet nouveauProjet) {
